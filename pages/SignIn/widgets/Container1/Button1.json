@@ -29,7 +29,7 @@
   "mobileRightColumn": 43,
   "mobileTopRow": 38,
   "needsErrorInfo": false,
-  "onClick": "{{navigateTo('Home', {}, 'SAME_WINDOW');}}",
+  "onClick": "{{navigateTo('Users', {}, 'SAME_WINDOW');}}",
   "parentColumnSpace": 9.75,
   "parentId": "z44dtlnj1s",
   "parentRowSpace": 10,
