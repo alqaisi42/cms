@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 17,
+  "bottomRow": 37,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -18,7 +18,7 @@
   "isLoading": false,
   "isVisible": true,
   "key": "mqce7xijpe",
-  "leftColumn": 18,
+  "leftColumn": 17,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
@@ -31,19 +31,19 @@
   "originalTopRow": 13,
   "overflow": "NONE",
   "parentColumnSpace": 9.75,
-  "parentId": "z44dtlnj1s",
+  "parentId": "0",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 46,
+  "rightColumn": 45,
   "shouldTruncate": false,
   "text": "APPLICATION CMS LOGIN",
   "textAlign": "CENTER",
   "textColor": "#054b88",
-  "topRow": 13,
+  "topRow": 33,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "mdad8gnpcs",
+  "widgetId": "9lmrq25qy3",
   "widgetName": "Text1"
 }

@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 13,
+  "bottomRow": 33,
   "boxShadow": "none",
   "defaultImage": "https://medexagroup.com/wp-content/uploads/2020/09/medlogo-1.png",
   "dynamicBindingPathList": [
@@ -18,7 +18,7 @@
   "isLoading": false,
   "isVisible": true,
   "key": "2by3puu182",
-  "leftColumn": 23,
+  "leftColumn": 28,
   "maxZoomLevel": 1,
   "mobileBottomRow": 13,
   "mobileLeftColumn": 26,
@@ -27,13 +27,13 @@
   "needsErrorInfo": false,
   "objectFit": "contain",
   "parentColumnSpace": 9.75,
-  "parentId": "z44dtlnj1s",
+  "parentId": "0",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
-  "rightColumn": 41,
-  "topRow": 1,
+  "rightColumn": 35,
+  "topRow": 21,
   "type": "IMAGE_WIDGET",
   "version": 1,
-  "widgetId": "oqzl7yfpb5",
+  "widgetId": "93dij2047g",
   "widgetName": "Image1"
 }
