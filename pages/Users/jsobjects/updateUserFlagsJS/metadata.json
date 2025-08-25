@@ -1,0 +1,11 @@
+{
+  "gitSyncId": "6834436f15756d4a34e18dca_6e98c771-ca08-4e4a-b97a-ebd9f1a43995",
+  "id": "Users_updateUserFlagsJS",
+  "unpublishedCollection": {
+    "name": "updateUserFlagsJS",
+    "pageId": "Users",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": []
+  }
+}

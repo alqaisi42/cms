@@ -1,0 +1,9 @@
+{
+    "lang": 1,
+    "hcpcId": {{clmDtl.selectedOptionValue}},
+    "ol2VstId": {{ appsmith.URL.queryParams.vstId || appsmith.store.vstId }},
+    "ol2ClmId": {{ appsmith.URL.queryParams.clm || appsmith.store.clmId }},
+    "count": {{clmDtlCount.text || 1}},
+    "pPatID": {{appsmith.URL.queryParams.patIdView || appsmith.store.patVstId }},
+    "pMpID": {{appsmith.store.mpId}}
+}

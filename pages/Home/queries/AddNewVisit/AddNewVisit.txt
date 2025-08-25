@@ -1,0 +1,11 @@
+{
+    "lang": 1,
+    "clmNo": {{formNo.text}}, 
+    "patId": {{subsId.text}},
+    "specialityId": {{speciality.selectedOptionValue}},
+    "clmTypeId": {{claimType.selectedOptionValue}},
+    "id": {{appsmith.store.mpUser}},
+    "password": {{appsmith.store.mpPass}},
+    "newLang": "en",
+    "fcmToken": ""
+}

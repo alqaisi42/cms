@@ -1,0 +1,11 @@
+{
+  "gitSyncId": "6834436f15756d4a34e18dca_2d75d80a-c176-49dc-a7fe-9c388e823b86",
+  "id": "Home_getMpTypes",
+  "unpublishedCollection": {
+    "name": "getMpTypes",
+    "pageId": "Home",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": []
+  }
+}

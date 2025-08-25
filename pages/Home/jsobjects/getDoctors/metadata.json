@@ -1,0 +1,11 @@
+{
+  "gitSyncId": "6834436f15756d4a34e18dca_ea93a7e4-8c14-4765-b1cc-d6819fce392a",
+  "id": "Home_getDoctors",
+  "unpublishedCollection": {
+    "name": "getDoctors",
+    "pageId": "Home",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": []
+  }
+}

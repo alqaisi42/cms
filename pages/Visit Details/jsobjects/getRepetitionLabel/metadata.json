@@ -1,0 +1,11 @@
+{
+  "gitSyncId": "6834436f15756d4a34e18dca_d00ba469-f11d-4670-a038-33ad627462ca",
+  "id": "Visit Details_getRepetitionLabel",
+  "unpublishedCollection": {
+    "name": "getRepetitionLabel",
+    "pageId": "Visit Details",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": []
+  }
+}

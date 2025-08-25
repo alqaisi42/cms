@@ -1,0 +1,11 @@
+{
+  "gitSyncId": "6834436f15756d4a34e18dca_2d1f621c-9a06-450e-85d0-50cf6904645e",
+  "id": "Home_deleteVisit",
+  "unpublishedCollection": {
+    "name": "deleteVisit",
+    "pageId": "Home",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": []
+  }
+}

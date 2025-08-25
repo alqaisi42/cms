@@ -1,0 +1,11 @@
+{
+  "gitSyncId": "6834436f15756d4a34e18dca_dd712233-ee91-4869-af6b-1525675e5e5b",
+  "id": "Manage Admins_addAdmin",
+  "unpublishedCollection": {
+    "name": "addAdmin",
+    "pageId": "Manage Admins",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": []
+  }
+}

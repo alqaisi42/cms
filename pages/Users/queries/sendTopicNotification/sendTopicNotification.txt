@@ -1,0 +1,7 @@
+{
+  "topic": {{ this.params.topic }},
+  "title": {{ this.params.title }},
+  "body": {{ this.params.body }},
+  "type": {{ this.params.type }},
+  "patId": {{ this.params.patId }}
+}

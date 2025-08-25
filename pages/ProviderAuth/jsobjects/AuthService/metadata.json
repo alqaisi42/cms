@@ -1,0 +1,11 @@
+{
+  "gitSyncId": "6834436f15756d4a34e18dca_09cdfa60-d2a0-40ce-a8fe-6490b319c188",
+  "id": "ProviderAuth_AuthService",
+  "unpublishedCollection": {
+    "name": "AuthService",
+    "pageId": "ProviderAuth",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": []
+  }
+}

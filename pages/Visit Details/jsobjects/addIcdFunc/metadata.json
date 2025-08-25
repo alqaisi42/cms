@@ -1,0 +1,11 @@
+{
+  "gitSyncId": "6834436f15756d4a34e18dca_2019c438-95b0-4e69-b4ba-aa3eea8f14ef",
+  "id": "Visit Details_addIcdFunc",
+  "unpublishedCollection": {
+    "name": "addIcdFunc",
+    "pageId": "Visit Details",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": []
+  }
+}

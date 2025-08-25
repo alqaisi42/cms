@@ -1,0 +1,11 @@
+{
+  "gitSyncId": "6834436f15756d4a34e18dca_257739ee-d415-4db7-8bfc-d7282a572b7c",
+  "id": "Home_fetchClaims",
+  "unpublishedCollection": {
+    "name": "fetchClaims",
+    "pageId": "Home",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": []
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "id": "{{ IDInput.text.trim() }}",
+  "password": "{{ PasswordInput.text.trim() }}",
+  "userType": "1",
+  "newPass": null,
+  "newLang": "en",
+  "fcmToken": ""
+}

@@ -1,0 +1,57 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "alignment": "left",
+  "animateLoading": true,
+  "bottomRow": 34,
+  "boxShadow": "none",
+  "defaultOptionValue": "Y",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    }
+  ],
+  "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicTriggerPathList": [],
+  "flexVerticalAlignment": "start",
+  "isDisabled": false,
+  "isInline": true,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": true,
+  "key": "vl98uxzsqv",
+  "label": "",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelTextSize": "0.875rem",
+  "labelWidth": 5,
+  "leftColumn": 1,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "mobileBottomRow": 27,
+  "mobileLeftColumn": 1,
+  "mobileRightColumn": 21,
+  "mobileTopRow": 21,
+  "needsErrorInfo": false,
+  "options": [
+    {
+      "label": "Auto Generate Visit No.",
+      "value": "Y"
+    },
+    {
+      "label": "Visit Form Number",
+      "value": "N"
+    }
+  ],
+  "originalBottomRow": 30,
+  "originalTopRow": 26,
+  "parentColumnSpace": 17.1875,
+  "parentId": "cxvzleh2ll",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "rightColumn": 28,
+  "topRow": 30,
+  "type": "RADIO_GROUP_WIDGET",
+  "version": 1,
+  "widgetId": "rpofdn3cz2",
+  "widgetName": "RadioGroup1"
+}

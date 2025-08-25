@@ -1,0 +1,11 @@
+{
+  "gitSyncId": "6834436f15756d4a34e18dca_af888442-cc14-4115-85f7-0c2cc77c0ab0",
+  "id": "Visit Details_checkRowSelectedClm",
+  "unpublishedCollection": {
+    "name": "checkRowSelectedClm",
+    "pageId": "Visit Details",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": []
+  }
+}

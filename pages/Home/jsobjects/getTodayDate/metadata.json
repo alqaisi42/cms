@@ -1,0 +1,11 @@
+{
+  "gitSyncId": "6834436f15756d4a34e18dca_b3b6add5-af93-4d0c-9be6-98d87ed30907",
+  "id": "Home_getTodayDate",
+  "unpublishedCollection": {
+    "name": "getTodayDate",
+    "pageId": "Home",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": []
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "allowedFileTypes": [
+    ".png",
+    "image/jpeg"
+  ],
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 96,
+  "boxShadow": "none",
+  "buttonColor": "#2f80ed",
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onFilesSelected"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onFilesSelected"
+    }
+  ],
+  "dynamicTyping": true,
+  "fileDataType": "Base64",
+  "files": [],
+  "isDefaultClickDisabled": true,
+  "isDisabled": false,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": true,
+  "key": "74eca503h0",
+  "label": "Add Attachment",
+  "leftColumn": 53,
+  "maxFileSize": 5,
+  "maxNumFiles": "5",
+  "minWidth": 120,
+  "mobileBottomRow": 86,
+  "mobileLeftColumn": 12,
+  "mobileRightColumn": 28,
+  "mobileTopRow": 82,
+  "needsErrorInfo": false,
+  "onFilesSelected": "{{ uploadFiles.onFilesSelected();}}",
+  "originalBottomRow": 96,
+  "originalTopRow": 92,
+  "parentColumnSpace": 20.125,
+  "parentId": "o0at5kjh2t",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "hug",
+  "rightColumn": 64,
+  "selectedFiles": [],
+  "topRow": 92,
+  "type": "FILE_PICKER_WIDGET_V2",
+  "version": 1,
+  "widgetId": "oq1g3u30xk",
+  "widgetName": "FilePicker1"
+}

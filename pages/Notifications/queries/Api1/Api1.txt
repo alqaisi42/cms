@@ -1,0 +1,12 @@
+{
+    "topic": {{appsmith.store.selectedTopic}},
+    "title": {{noti_body.text}},
+    "body": '{{ noti_body.text
+    .replace(/<[^>]*>/g, "")         
+    .replace(/&nbsp;/g, " ")         
+    .replace(/\s+/g, " ")            
+    .trim()
+    }}',
+    "type": "",
+    "patId": ""
+}

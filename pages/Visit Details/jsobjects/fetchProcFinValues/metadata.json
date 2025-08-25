@@ -1,0 +1,11 @@
+{
+  "gitSyncId": "6834436f15756d4a34e18dca_0d28c2b1-9a51-4cd5-aac1-f80c8ab0b281",
+  "id": "Visit Details_fetchProcFinValues",
+  "unpublishedCollection": {
+    "name": "fetchProcFinValues",
+    "pageId": "Visit Details",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": []
+  }
+}

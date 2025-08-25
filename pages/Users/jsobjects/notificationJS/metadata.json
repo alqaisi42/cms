@@ -1,0 +1,11 @@
+{
+  "gitSyncId": "6834436f15756d4a34e18dca_870bde21-616c-472f-a3ba-ca622cb88e43",
+  "id": "Users_notificationJS",
+  "unpublishedCollection": {
+    "name": "notificationJS",
+    "pageId": "Users",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": []
+  }
+}

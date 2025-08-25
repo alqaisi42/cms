@@ -1,0 +1,60 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 25,
+  "boxShadow": "none",
+  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "buttonColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "isDefaultClickDisabled": true,
+  "isDisabled": "{{drugList.selectedOptionValue == '' || \ndrugCount.text == '' || drugCount.text < 0.1\n}}",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "repmpwuw4z",
+  "leftColumn": 51,
+  "minWidth": 120,
+  "mobileBottomRow": 86,
+  "mobileLeftColumn": 20,
+  "mobileRightColumn": 36,
+  "mobileTopRow": 82,
+  "needsErrorInfo": false,
+  "onClick": "{{addDrugToPlan.addDrugToPlan();}}",
+  "originalBottomRow": 117,
+  "originalTopRow": 113,
+  "parentColumnSpace": 20.125,
+  "parentId": "o0at5kjh2t",
+  "parentRowSpace": 10,
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": true,
+  "responsiveBehavior": "hug",
+  "rightColumn": 64,
+  "text": "Add Drug",
+  "topRow": 21,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "ev9jgipo0z",
+  "widgetName": "Button2"
+}

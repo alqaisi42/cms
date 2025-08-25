@@ -1,0 +1,11 @@
+{
+  "gitSyncId": "6834436f15756d4a34e18dca_092cb418-a624-4b7b-a813-c97ad54f9953",
+  "id": "UserDetailsPage_deleteAndNotifyJS",
+  "unpublishedCollection": {
+    "name": "deleteAndNotifyJS",
+    "pageId": "UserDetailsPage",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": []
+  }
+}

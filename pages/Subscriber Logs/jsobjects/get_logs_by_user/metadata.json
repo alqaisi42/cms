@@ -1,0 +1,11 @@
+{
+  "gitSyncId": "6834436f15756d4a34e18dca_2c8c14c8-2df7-45e0-8ab0-2425fe621292",
+  "id": "Subscriber Logs_get_logs_by_user",
+  "unpublishedCollection": {
+    "name": "get_logs_by_user",
+    "pageId": "Subscriber Logs",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": []
+  }
+}

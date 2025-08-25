@@ -1,0 +1,11 @@
+{
+  "gitSyncId": "6834436f15756d4a34e18dca_e4f62bab-0cca-4ae7-a7ae-4641575544d0",
+  "id": "Visit Details_getSubVstInfo",
+  "unpublishedCollection": {
+    "name": "getSubVstInfo",
+    "pageId": "Visit Details",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": []
+  }
+}

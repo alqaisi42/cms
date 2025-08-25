@@ -1,0 +1,16 @@
+{
+  "gitSyncId": "6834436f15756d4a34e18dca_0c08947c-ac23-4891-bad6-eea51f7b5630",
+  "id": "Users_rowClickHandler",
+  "unpublishedCollection": {
+    "name": "rowClickHandler",
+    "pageId": "Users",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": [
+      {
+        "name": "lastClickTime",
+        "value": "0"
+      }
+    ]
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "gitSyncId": "6834436f15756d4a34e18dca_0ae832bf-7fec-4af9-8b58-7a94e8e8b3e5",
+  "id": "Visit Details_addDrugToPlan",
+  "unpublishedCollection": {
+    "name": "addDrugToPlan",
+    "pageId": "Visit Details",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": []
+  }
+}
