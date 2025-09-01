@@ -208,9 +208,6 @@
       "key": "primaryColumns.customColumn1.boxShadow"
     },
     {
-      "key": "primaryColumns.customColumn1.isDisabled"
-    },
-    {
       "key": "primaryColumns.customColumn2.boxShadow"
     },
     {
@@ -224,6 +221,12 @@
     },
     {
       "key": "primaryColumns.IS_ENABLED.isCellVisible"
+    },
+    {
+      "key": "primaryColumns.customColumn1.isDisabled"
+    },
+    {
+      "key": "primaryColumns.IS_ADMIN.isCellVisible"
     }
   ],
   "dynamicPropertyPathList": [
@@ -253,6 +256,12 @@
     },
     {
       "key": "primaryColumns.IS_ENABLED.isCellVisible"
+    },
+    {
+      "key": "primaryColumns.IS_ADMIN.isCellVisible"
+    },
+    {
+      "key": "primaryColumns.IS_ENABLED.onCheckChange"
     }
   ],
   "dynamicTriggerPathList": [
@@ -904,7 +913,7 @@
       "id": "IS_ADMIN",
       "index": 13,
       "isCellEditable": true,
-      "isCellVisible": true,
+      "isCellVisible": "{{(() => { const tableData = dep_table.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ( currentRow?.IS_ENABLE != null )) :  currentRow?.IS_ENABLE != null  })()}}",
       "isDerived": false,
       "isDisabled": false,
       "isDiscardVisible": true,
@@ -982,7 +991,7 @@
       "isVisible": true,
       "label": "Is Enables",
       "notation": "standard",
-      "onCheckChange": "",
+      "onCheckChange": "{{\n  updateDepEnablity.run()\n    .then(() => getSubsDep.run())\n    .then(() => {\n      if (dep_table.selectedRow.IS_ENABLED === false) {\n        return notificationJS.sendReminder(dep_table.selectedRow.ID);\n      }\n    })\n    .catch(() => {\n      showAlert('This action was not completed', 'error');\n    });\n}}\n",
       "onClick": "{{showModal(Enable_Modal.name);}}",
       "originalId": "IS_ENABLED",
       "sticky": "right",
@@ -1364,7 +1373,7 @@
       "label": "Logs",
       "labelColor": "#FFFFFF",
       "notation": "standard",
-      "onClick": "{{navigateTo('Subscriber Logs', {\n  depId: appsmith.store.DepLogsId,\nsubsName: currentRow.NAME_E\n}, 'SAME_WINDOW');}}",
+      "onClick": "{{navigateTo('Subscriber Logs', { depId: appsmith.store.DepLogsId, subsName: currentRow.NAME_E }, 'SAME_WINDOW');}}",
       "originalId": "customColumn1",
       "sticky": "right",
       "textSize": "0.875rem",

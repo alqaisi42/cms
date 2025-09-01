@@ -43,7 +43,7 @@
   "mobileRightColumn": 63,
   "mobileTopRow": 18,
   "needsErrorInfo": false,
-  "onClick": "{{enableDep.run().then(() => {\n  closeModal(Enable_Modal.name);\n PhoneInput1.setText('');\n}).catch(() => {\n  showAlert('Enable E-Card Failed', 'error');\n});}}",
+  "onClick": "{{ \n(async () => {\n  try {\n    await enableDep.run();\n    closeModal(Enable_Modal.name);\n    PhoneInput1.setText('');\n    await getSubsDep.run();\n  } catch (e) {\n    showAlert('Enable E-Card Failed', 'error');\n  }\n})()\n}}\n",
   "originalBottomRow": 22,
   "originalTopRow": 18,
   "parentId": "xuqic8lx5m",

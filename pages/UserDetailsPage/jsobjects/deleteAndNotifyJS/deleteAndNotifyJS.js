@@ -15,9 +15,8 @@ export default {
       await deleteUserCascade.run({ subsId });
 
       showAlert(`Deleted user ${subsId} successfully`, "success");
-
-      
-
+     await UserLoader.refreshUsers.data
+		
       await notificationJS.sendReminder(subsId);
 			closeModal(DeleteUserModal.name);
 			navigateTo('Users');
