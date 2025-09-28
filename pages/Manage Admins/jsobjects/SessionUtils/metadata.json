@@ -1,0 +1,11 @@
+{
+  "gitSyncId": "68ac2838dde0d07712e044df_16d39f33-63a2-479e-a027-ede9162fe49e",
+  "id": "Manage Admins_SessionUtils",
+  "unpublishedCollection": {
+    "name": "SessionUtils",
+    "pageId": "Manage Admins",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": []
+  }
+}

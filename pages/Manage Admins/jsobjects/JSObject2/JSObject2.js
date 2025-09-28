@@ -1,21 +1,28 @@
 export default {
   async dashboardUsers_onDelete() {
     try {
-      const selectedIds = Table1.selectedRows.map(row => row.ID);
+      const selectedRow = Table1.selectedRow;
 
-      if (selectedIds.length === 0) {
-        showAlert("No users selected", "warning");
+      // 🧠 Safety check
+      if (!selectedRow || !selectedRow.ID) {
+        showAlert("No user selected.", "warning");
         return;
       }
 
-      await DeleteDashboardUser.run({ IDs: selectedIds });
+      const selectedId = selectedRow.ID;
 
-      showAlert("Selected users deleted successfully", "success");
-      await get_all_admins.run(); 
+      // 🚀 Run delete query (expects single param)
+      await DeleteDashboardUser.run({ ID: selectedId });
+
+      // ✅ Success alert
+      showAlert(`User with ID ${selectedId} deleted successfully.`, "success");
+
+      // 🔄 Refresh table or data source
+      await get_all_admins.run();
 
     } catch (err) {
-      console.error("Bulk delete failed", err);
-      showAlert("Failed to delete users: " + err.message, "error");
+      console.error("Delete failed:", err);
+      showAlert("Failed to delete user: " + err.message, "error");
     }
   }
-}
+};

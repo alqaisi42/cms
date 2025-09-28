@@ -44,7 +44,9 @@
   ],
   "columnUpdatedAt": 1748419380199,
   "columnWidthMap": {
-    "CREATION_DATE": 324
+    "CREATION_DATE": 222,
+    "EditActions1": 187,
+    "ID": 61
   },
   "customIsLoading": false,
   "customIsLoadingValue": "",
@@ -82,15 +84,6 @@
     },
     {
       "key": "primaryColumns.CREATION_DATE.computedValue"
-    },
-    {
-      "key": "primaryColumns.customColumn1.buttonColor"
-    },
-    {
-      "key": "primaryColumns.customColumn1.borderRadius"
-    },
-    {
-      "key": "primaryColumns.customColumn1.boxShadow"
     },
     {
       "key": "primaryColumns.EditActions1.saveButtonColor"
@@ -398,11 +391,9 @@
       "alias": "Delete",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
-      "borderRadius": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
-      "boxShadow": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( \"none\"))}}",
-      "buttonColor": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.colors.primaryColor)))}}",
+      "buttonLabel": "Remove",
       "buttonStyle": "rgb(3, 179, 101)",
-      "columnType": "iconButton",
+      "columnType": "button",
       "computedValue": "",
       "currencyCode": "USD",
       "customAlias": "",

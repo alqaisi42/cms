@@ -1,10 +1,11 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 47,
+  "bottomRow": 21,
   "boxShadow": "none",
   "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
-  "buttonVariant": "PRIMARY",
+  "buttonStyle": "PRIMARY",
+  "buttonVariant": "SECONDARY",
   "disabledWhenInvalid": false,
   "dynamicBindingPathList": [
     {
@@ -14,37 +15,37 @@
       "key": "borderRadius"
     }
   ],
-  "dynamicTriggerPathList": [],
-  "iconAlign": "left",
-  "iconName": "history",
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
   "isDefaultClickDisabled": true,
-  "isDisabled": true,
+  "isDisabled": false,
   "isLoading": false,
   "isVisible": true,
-  "key": "djzqwyh2e1",
-  "leftColumn": 17,
+  "key": "aeqhulyvtg",
+  "leftColumn": 31,
   "minWidth": 120,
-  "mobileBottomRow": 41,
-  "mobileLeftColumn": 9,
-  "mobileRightColumn": 25,
-  "mobileTopRow": 37,
+  "mobileBottomRow": 22,
+  "mobileLeftColumn": 31,
+  "mobileRightColumn": 47,
+  "mobileTopRow": 18,
   "needsErrorInfo": false,
-  "originalBottomRow": 17,
-  "originalTopRow": 13,
-  "parentColumnSpace": 20.125,
-  "parentId": "0",
-  "parentRowSpace": 10,
+  "onClick": "{{closeModal(Modal1.name);}}",
+  "originalBottomRow": 21,
+  "originalTopRow": 17,
+  "parentId": "v6n94ovpbq",
   "placement": "CENTER",
   "recaptchaType": "V3",
   "renderMode": "CANVAS",
   "resetFormOnClick": false,
   "responsiveBehavior": "hug",
-  "rightColumn": 27,
-  "text": "schedule to send",
-  "tooltip": "This feature Will be available soon!",
-  "topRow": 43,
+  "rightColumn": 47,
+  "text": "Close",
+  "topRow": 17,
   "type": "BUTTON_WIDGET",
   "version": 1,
-  "widgetId": "bnoiebckm3",
-  "widgetName": "Button2"
+  "widgetId": "om9k6sd9mf",
+  "widgetName": "Button1"
 }

@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 17,
+  "bottomRow": 47,
   "boxShadow": "none",
   "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
   "buttonVariant": "PRIMARY",
@@ -22,19 +22,24 @@
       "key": "isDisabled"
     }
   ],
-  "dynamicTriggerPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
   "isDefaultClickDisabled": true,
   "isDisabled": "{{!noti_body.text.trim() || (\n  targetList.selectedOptionValue === \"1\" && !user_select.selectedOptionValue\n) || (\n  targetList.selectedOptionValue === \"2\" && !device_select.selectedOptionValue\n) || (\n  targetList.selectedOptionValue === \"3\" && !mpID.text.trim()\n)\n}}",
   "isLoading": false,
   "isVisible": true,
   "key": "djzqwyh2e1",
-  "leftColumn": 37,
+  "leftColumn": 0,
   "minWidth": 120,
   "mobileBottomRow": 41,
   "mobileLeftColumn": 0,
   "mobileRightColumn": 16,
   "mobileTopRow": 37,
   "needsErrorInfo": false,
+  "onClick": "{{notificationJS.sendReminder();}}",
   "originalBottomRow": 17,
   "originalTopRow": 13,
   "parentColumnSpace": 20.125,
@@ -45,10 +50,10 @@
   "renderMode": "CANVAS",
   "resetFormOnClick": false,
   "responsiveBehavior": "hug",
-  "rightColumn": 44,
+  "rightColumn": 7,
   "text": "Send Notification",
   "tooltip": "Please complete all required data to send notifications.",
-  "topRow": 13,
+  "topRow": 43,
   "type": "BUTTON_WIDGET",
   "version": 1,
   "widgetId": "q8iolz15w0",

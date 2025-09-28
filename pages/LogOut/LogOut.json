@@ -1,23 +1,22 @@
 {
-  "gitSyncId": "6834436f15756d4a34e18dca_5bccae46-da83-4d5d-abb8-6e3f7bef5e1d",
+  "gitSyncId": "68ac2838dde0d07712e044df_06aba572-87e3-46d4-a798-10f5c6a87240",
   "unpublishedPage": {
-    "isHidden": false,
     "layouts": [
       {
         "dsl": {
           "backgroundColor": "none",
-          "bottomRow": 470,
+          "bottomRow": 910,
           "canExtend": true,
           "containerStyle": "none",
           "detachFromLayout": true,
           "dynamicBindingPathList": [],
           "leftColumn": 0,
-          "minHeight": 930,
+          "minHeight": 920,
           "parentColumnSpace": 1,
           "parentRowSpace": 1,
           "rightColumn": 1224,
           "snapColumns": 64,
-          "snapRows": 91,
+          "snapRows": 90,
           "topRow": 0,
           "type": "CANVAS_WIDGET",
           "version": 94,
@@ -26,7 +25,7 @@
         }
       }
     ],
-    "name": "Notifications",
-    "slug": "notifications"
+    "name": "LogOut",
+    "slug": "logout"
   }
 }

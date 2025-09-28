@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 47,
+  "bottomRow": 6,
   "boxShadow": "none",
   "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
   "buttonVariant": "PRIMARY",
@@ -14,24 +14,25 @@
       "key": "borderRadius"
     }
   ],
-  "dynamicTriggerPathList": [],
-  "iconAlign": "left",
-  "iconName": "history",
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
   "isDefaultClickDisabled": true,
-  "isDisabled": true,
+  "isDisabled": false,
   "isLoading": false,
   "isVisible": true,
-  "key": "djzqwyh2e1",
-  "leftColumn": 17,
+  "key": "6le1d9979a",
+  "leftColumn": 55,
   "minWidth": 120,
-  "mobileBottomRow": 41,
-  "mobileLeftColumn": 9,
-  "mobileRightColumn": 25,
-  "mobileTopRow": 37,
+  "mobileBottomRow": 87,
+  "mobileLeftColumn": 46,
+  "mobileRightColumn": 62,
+  "mobileTopRow": 83,
   "needsErrorInfo": false,
-  "originalBottomRow": 17,
-  "originalTopRow": 13,
-  "parentColumnSpace": 20.125,
+  "onClick": "{{UserLoader.refreshUsers();}}",
+  "parentColumnSpace": 19.8125,
   "parentId": "0",
   "parentRowSpace": 10,
   "placement": "CENTER",
@@ -39,12 +40,11 @@
   "renderMode": "CANVAS",
   "resetFormOnClick": false,
   "responsiveBehavior": "hug",
-  "rightColumn": 27,
-  "text": "schedule to send",
-  "tooltip": "This feature Will be available soon!",
-  "topRow": 43,
+  "rightColumn": 64,
+  "text": "Refresh Data",
+  "topRow": 2,
   "type": "BUTTON_WIDGET",
   "version": 1,
-  "widgetId": "bnoiebckm3",
-  "widgetName": "Button2"
+  "widgetId": "6j4cbprxpm",
+  "widgetName": "Button3"
 }

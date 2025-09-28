@@ -11,7 +11,11 @@
       "key": "borderRadius"
     }
   ],
-  "dynamicPropertyPathList": [],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
   "dynamicTriggerPathList": [
     {
       "key": "onClick"
@@ -29,7 +33,7 @@
   "mobileRightColumn": 43,
   "mobileTopRow": 38,
   "needsErrorInfo": false,
-  "onClick": "{{navigateTo('Users', {}, 'SAME_WINDOW');}}",
+  "onClick": "{{ AuthUtils.login(InputUsername.text, InputPassword.text) }}\n",
   "parentColumnSpace": 9.75,
   "parentId": "0",
   "parentRowSpace": 10,
