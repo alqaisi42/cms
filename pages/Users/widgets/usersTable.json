@@ -32,6 +32,7 @@
     }
   },
   "columnOrder": [
+    "customColumn2",
     "RNUM",
     "SUBS_ID",
     "SUBSCRIBER_NAME",
@@ -41,10 +42,9 @@
     "HOF_ID",
     "REG_DATE",
     "DEVICE_ID",
-    "DEVICE_TYPE",
-    "customColumn2"
+    "DEVICE_TYPE"
   ],
-  "columnUpdatedAt": 1756101481560,
+  "columnUpdatedAt": 1759062143603,
   "columnWidthMap": {
     "DEVICE_TYPE": 404,
     "EditActions1": 163,
@@ -816,7 +816,7 @@
       "notation": "standard",
       "onClick": "{{\n  (async () => {\n    await \n  usersTable.selectedRow.SUBS_ID \n    ? navigateTo('UserDetailsPage', {}, 'SAME_WINDOW'):  showAlert(\"Please select a subscriber row first\", \"warning\") \n  })()\n}}\n",
       "originalId": "customColumn2",
-      "sticky": "right",
+      "sticky": "left",
       "textSize": "0.875rem",
       "thousandSeparator": true,
       "validation": {},
