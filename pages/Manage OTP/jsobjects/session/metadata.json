@@ -1,0 +1,11 @@
+{
+  "gitSyncId": "68ac2838dde0d07712e044df_2c9c3e3c-9128-4f96-a13b-a5bc571164aa",
+  "id": "Manage OTP_session",
+  "unpublishedCollection": {
+    "name": "session",
+    "pageId": "Manage OTP",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": []
+  }
+}
