@@ -76,6 +76,10 @@
       "isDefault": false
     },
     {
+      "id": "Profile",
+      "isDefault": false
+    },
+    {
       "id": "LogOut",
       "isDefault": false
     }
