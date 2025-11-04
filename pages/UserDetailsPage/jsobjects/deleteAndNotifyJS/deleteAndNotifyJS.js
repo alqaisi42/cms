@@ -13,13 +13,11 @@ export default {
 			notifyDeps.notifyCascadingUsers(appsmith.store.selectedUserId);
 
       await deleteUserCascade.run({ subsId });
-
       showAlert(`Deleted user ${subsId} successfully`, "success");
-
-      
 
       await notificationJS.sendReminder(subsId);
 			closeModal(DeleteUserModal.name);
+			await UserLoader.refreshUsers();
 			navigateTo('Users');
 
     } catch (err) {

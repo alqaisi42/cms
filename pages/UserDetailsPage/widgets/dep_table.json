@@ -66,9 +66,11 @@
   ],
   "columnUpdatedAt": 1756102854174,
   "columnWidthMap": {
+    "DEVICE_ID": 60,
     "ID": 95,
     "IS_REGISTERED": 137,
-    "USER_PHONE": 167
+    "USER_PHONE": 167,
+    "customColumn1": 84
   },
   "customIsLoading": false,
   "customIsLoadingValue": "",
