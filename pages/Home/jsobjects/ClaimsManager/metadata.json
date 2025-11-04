@@ -1,0 +1,16 @@
+{
+  "gitSyncId": "68ac2838dde0d07712e044df_a547dd2f-cf73-4d53-bcef-c670be75143a",
+  "id": "Home_ClaimsManager",
+  "unpublishedCollection": {
+    "name": "ClaimsManager",
+    "pageId": "Home",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": [
+      {
+        "name": "cacheKey",
+        "value": "\"cachedClaims\""
+      }
+    ]
+  }
+}

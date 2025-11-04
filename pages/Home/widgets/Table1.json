@@ -97,9 +97,6 @@
       "key": "boxShadow"
     },
     {
-      "key": "tableData"
-    },
-    {
       "key": "primaryColumns.ol2visitsId.computedValue"
     },
     {
@@ -203,6 +200,9 @@
     },
     {
       "key": "primaryColumns.customColumn3.buttonColor"
+    },
+    {
+      "key": "tableData"
     }
   ],
   "dynamicPropertyPathList": [
@@ -256,8 +256,8 @@
   "multiRowSelection": false,
   "needsErrorInfo": false,
   "onRowSelected": "{{\nstoreValue(\"selectedVstId\", Table1.selectedRow.ol2visitsId\n);\n}}\n",
-  "originalBottomRow": 103,
-  "originalTopRow": 27,
+  "originalBottomRow": 96,
+  "originalTopRow": 20,
   "parentColumnSpace": 19.8125,
   "parentId": "0",
   "parentRowSpace": 10,
@@ -503,7 +503,7 @@
       "label": "",
       "labelColor": "#FFFFFF",
       "notation": "standard",
-      "onClick": "{{ \n  Table1.selectedRow.ol2visitsId  \n    ? navigateTo('Visit Details', {\n        \"vstId\": Table1.selectedRow.ol2visitsId,\n        \"clm\": Table1.selectedRow.ol2claimsId,\n        \"patIdView\": Table1.selectedRow.patId,\n        \"vstDate\": Table1.selectedRow.vstDate,\n        \"vstNo\": Table1.selectedRow.vstNo,\n        \"docSpec\": Table1.selectedRow.specialtyDescE\n      }, 'SAME_WINDOW') \n    : showAlert(\"Please select a claim row first\", \"warning\") \n}}\n",
+      "onClick": "{{\n  Table1.selectedRow.ol2visitsId \n    ? (() => {\n navigateTo('Visit Details', {\n          vstId: Table1.selectedRow.ol2visitsId,\n          clm: Table1.selectedRow.ol2claimsId,\n          patIdView: Table1.selectedRow.patId,\n          vstDate: Table1.selectedRow.vstDate,\n          vstNo: Table1.selectedRow.vstNo,\n          docSpec: Table1.selectedRow.specialtyDescE\n        }, 'SAME_WINDOW');\n      })()\n    : showAlert(\"Please select a claim row first\", \"warning\")\n}}\n",
       "originalId": "customColumn3",
       "sticky": "right",
       "textSize": "0.875rem",
@@ -1301,7 +1301,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 64,
   "searchKey": "",
-  "tableData": "{{GetClaims.data.response}}",
+  "tableData": "{{ClaimsManager.loadData.data}}",
   "textSize": "0.875rem",
   "topRow": 20,
   "totalRecordsCount": 0,

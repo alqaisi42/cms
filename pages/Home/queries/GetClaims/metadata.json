@@ -30,10 +30,6 @@
           "value": "{{appsmith.store.userProfile.mpId}}"
         },
         {
-          "key": "pMpPartID",
-          "value": "{{ appsmith.store.userProfile.mpPartId ?? '' }}"
-        },
-        {
           "key": "pPatID",
           "value": "{{SelectedPatientId.text}}"
         },
@@ -56,6 +52,15 @@
     "dynamicBindingPathList": [
       {
         "key": "path"
+      },
+      {
+        "key": "queryParameters[2].value"
+      },
+      {
+        "key": "queryParameters[3].value"
+      },
+      {
+        "key": "queryParameters[4].value"
       }
     ],
     "name": "GetClaims",

@@ -20,6 +20,10 @@
         {
           "key": "vstDate",
           "value": "{{appsmith.URL.queryParams.vstDate || getTodayDate.getTodayDate.data}}"
+        },
+        {
+          "key": "type",
+          "value": "VST"
         }
       ],
       "timeoutInMillisecond": 10000
