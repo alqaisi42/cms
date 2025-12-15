@@ -17,6 +17,9 @@
   "dynamicPropertyPathList": [
     {
       "key": "buttonColor"
+    },
+    {
+      "key": "onClick"
     }
   ],
   "dynamicTriggerPathList": [
@@ -36,7 +39,7 @@
   "mobileRightColumn": 64,
   "mobileTopRow": 1,
   "needsErrorInfo": false,
-  "onClick": "{{navigateTo('Users', {}, 'SAME_WINDOW');}}",
+  "onClick": "{{\n  (() => {\n    switch (appsmith.store.Routefrom) {\n      case \"All\":\n        navigateTo(\"All Subscribers\", {}, \"SAME_WINDOW\");\n        break;\n      case \"Users\":\n        navigateTo(\"Users\", {}, \"SAME_WINDOW\");\n        break;\n      default:\n        navigateTo(\"Users\", {}, \"SAME_WINDOW\");\n    }\n  })()\n}}\n",
   "parentColumnSpace": 20.125,
   "parentId": "0",
   "parentRowSpace": 10,

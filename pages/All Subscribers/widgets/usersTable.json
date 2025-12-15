@@ -4,7 +4,7 @@
   "borderColor": "#E0DEDE",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "borderWidth": "1",
-  "bottomRow": 87,
+  "bottomRow": 91,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "cachedTableData": {},
   "canFreezeColumn": true,
@@ -38,7 +38,6 @@
     "MOBILE_PHONE",
     "USER_MOBILE",
     "NATIONAL_NO",
-    "HOF_ID",
     "EMP_NO",
     "EMAIL1",
     "CNT_ID",
@@ -51,9 +50,11 @@
     "USER_NAME",
     "REG_DATE",
     "DEVICE_TYPE",
+    "HOF_ID",
+    "customColumn1",
     "IS_REGISTERED"
   ],
-  "columnUpdatedAt": 1765785885015,
+  "columnUpdatedAt": 1765786646280,
   "columnWidthMap": {
     "CNT_ID": 116,
     "COVERED_FLG": 123,
@@ -61,15 +62,14 @@
     "EMP_NO": 135,
     "END_DATE": 162,
     "FLG_INACTIVE": 121,
-    "IS_REGISTERED": 186,
     "MOBILE_PHONE": 167,
-    "NAME_A": 141,
-    "NAME_E": 158,
+    "NAME_A": 144,
+    "NAME_E": 187,
     "NATIONAL_NO": 124,
     "REG_DATE": 187,
     "START_DATE": 170,
-    "SUBS_ID": 89,
-    "USER_MOBILE": 212
+    "SUBS_ID": 103,
+    "USER_MOBILE": 179
   },
   "customIsLoading": false,
   "customIsLoadingValue": "",
@@ -154,6 +154,18 @@
     },
     {
       "key": "primaryColumns.HOF_ID.computedValue"
+    },
+    {
+      "key": "primaryColumns.customColumn1.buttonColor"
+    },
+    {
+      "key": "primaryColumns.customColumn1.borderRadius"
+    },
+    {
+      "key": "primaryColumns.customColumn1.boxShadow"
+    },
+    {
+      "key": "primaryColumns.customColumn1.isDisabled"
     }
   ],
   "dynamicPropertyPathList": [
@@ -165,11 +177,26 @@
     },
     {
       "key": "onSearchTextChanged"
+    },
+    {
+      "key": "primaryColumns.customColumn1.onClick"
+    },
+    {
+      "key": "primaryColumns.customColumn1.isDisabled"
+    },
+    {
+      "key": "onRowSelected"
     }
   ],
   "dynamicTriggerPathList": [
     {
       "key": "onSearchTextChanged"
+    },
+    {
+      "key": "primaryColumns.customColumn1.onClick"
+    },
+    {
+      "key": "onRowSelected"
     }
   ],
   "enableClientSideSearch": true,
@@ -192,11 +219,10 @@
   "mobileLeftColumn": 0,
   "mobileRightColumn": 34,
   "mobileTopRow": 6,
-  "multiRowSelection": true,
+  "multiRowSelection": false,
   "needsErrorInfo": false,
+  "onRowSelected": "{{\nstoreValue(\"selectedUserId\", usersTable.selectedRow.SUBS_ID);\ngetUserDetails.storeUserDetails(); \n}}",
   "onSearchTextChanged": "",
-  "originalBottomRow": 87,
-  "originalTopRow": 5,
   "parentColumnSpace": 19.8125,
   "parentId": "0",
   "parentRowSpace": 10,
@@ -531,7 +557,7 @@
       "isEditable": false,
       "isSaveVisible": true,
       "isVisible": true,
-      "label": "Is Registered In App",
+      "label": "IS_REGISTERED",
       "notation": "standard",
       "originalId": "IS_REGISTERED",
       "sticky": "right",
@@ -839,7 +865,7 @@
       "isEditable": false,
       "isSaveVisible": true,
       "isVisible": true,
-      "label": "Application Mobile No.",
+      "label": "App User Mobile No.",
       "notation": "standard",
       "originalId": "USER_MOBILE",
       "sticky": "",
@@ -878,6 +904,45 @@
       "originalId": "USER_NAME",
       "sticky": "",
       "textColor": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "customColumn1": {
+      "alias": "Manage",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "borderRadius": "{{usersTable.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
+      "boxShadow": "{{usersTable.processedTableData.map((currentRow, currentIndex) => ( \"none\"))}}",
+      "buttonColor": "{{usersTable.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.colors.primaryColor)))}}",
+      "buttonLabel": "Manage",
+      "buttonStyle": "rgb(3, 179, 101)",
+      "columnType": "button",
+      "computedValue": "",
+      "currencyCode": "USD",
+      "customAlias": "",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "horizontalAlignment": "LEFT",
+      "id": "customColumn1",
+      "index": 10,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": true,
+      "isDisabled": "{{(() => { const tableData = usersTable.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ( \n(appsmith.store.selectedUserId !== currentRow.SUBS_ID) ||  usersTable.selectedRowIndex === -1 )) :  \n(appsmith.store.selectedUserId !== currentRow.SUBS_ID) ||  usersTable.selectedRowIndex === -1  })()}}",
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "Manage",
+      "labelColor": "#FFFFFF",
+      "notation": "standard",
+      "onClick": "{{\n  (async () => {\n    if (usersTable.selectedRow?.SUBS_ID) {\n      await storeValue(\"Routefrom\", \"All\");\n      navigateTo(\"UserDetailsPage\", {}, \"SAME_WINDOW\");\n    } else {\n      showAlert(\"Please select a subscriber row first\", \"warning\");\n    }\n  })()\n}}\n",
+      "originalId": "customColumn1",
+      "sticky": "right",
       "textSize": "0.875rem",
       "thousandSeparator": true,
       "validation": {},
