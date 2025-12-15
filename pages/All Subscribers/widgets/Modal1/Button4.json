@@ -1,0 +1,59 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 32,
+  "boxShadow": "none",
+  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "buttonStyle": "PRIMARY_BUTTON",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "dynamicBindingPathList": [
+    {
+      "key": "buttonColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "isDefaultClickDisabled": true,
+  "isDisabled": "{{PhoneInput1.text == ''}}",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "mvzkubdwwo",
+  "leftColumn": 43,
+  "minWidth": 120,
+  "mobileBottomRow": 22,
+  "mobileLeftColumn": 47,
+  "mobileRightColumn": 63,
+  "mobileTopRow": 18,
+  "needsErrorInfo": false,
+  "onClick": "{{insertDieHOF.run().then(() => {\n  searchSubs.run();\n  closeModal(Modal1.name);\n});}}",
+  "originalBottomRow": 32,
+  "originalTopRow": 28,
+  "parentId": "bb5gy0rmx7",
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 63,
+  "text": "Confirm and Enable HOF",
+  "topRow": 28,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "z18qoay4l9",
+  "widgetName": "Button4"
+}

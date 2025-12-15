@@ -1,0 +1,8 @@
+{
+    "vst_id": {{ appsmith.URL.queryParams.vstId || appsmith.store.vstId }},
+    "clm_id": {{ appsmith.URL.queryParams.clm || appsmith.store.clmId }},
+    "note": {{drugNote.text || ''}},
+    "img": "{{ appsmith.store.file }}",
+    "confirm": "0",
+    "shared": "0"
+  }

@@ -25,7 +25,7 @@
     "fullyQualifiedName": "getTodayDate.getTodayDate",
     "name": "getTodayDate",
     "pageId": "Visit Details",
-    "runBehaviour": "ON_PAGE_LOAD",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }

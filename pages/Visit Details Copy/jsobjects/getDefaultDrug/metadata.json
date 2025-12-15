@@ -1,0 +1,11 @@
+{
+  "gitSyncId": "68ac2838dde0d07712e044df_24ef0541-4b57-428a-878c-e8744c0ebe9c",
+  "id": "Visit Details Copy_getDefaultDrug",
+  "unpublishedCollection": {
+    "name": "getDefaultDrug",
+    "pageId": "Visit Details Copy",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": []
+  }
+}

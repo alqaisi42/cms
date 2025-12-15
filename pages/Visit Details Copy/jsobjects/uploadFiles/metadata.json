@@ -1,0 +1,11 @@
+{
+  "gitSyncId": "68ac2838dde0d07712e044df_e744092f-54f5-412a-9af3-b0c7192c1219",
+  "id": "Visit Details Copy_uploadFiles",
+  "unpublishedCollection": {
+    "name": "uploadFiles",
+    "pageId": "Visit Details Copy",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": []
+  }
+}

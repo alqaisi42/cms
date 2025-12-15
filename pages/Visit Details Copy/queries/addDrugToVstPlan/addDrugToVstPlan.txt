@@ -1,0 +1,14 @@
+{
+  "vstId": {{ appsmith.URL.queryParams.vstId || appsmith.store.vstId }},
+  "mpTypeId": 2,
+  "count": {{drugCount.text || 1}},
+  "hcpcId": null,
+  "drugId": {{drugList.selectedOptionValue?.id}},
+  "tqId": {{appsmith.store.tq}},
+  "qty": {{qty.text || 1}},
+  "userId": {{appsmith.store.docUserId }},
+  "notes": {{drugNote.text || ''}},
+  "pPatID": {{appsmith.URL.queryParams.patIdView || appsmith.store.patVstId }},
+  "pMpID": {{appsmith.store.mpId}}
+
+}

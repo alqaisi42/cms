@@ -35,6 +35,7 @@
   "key": "iyq6sywhcz",
   "labelAlignment": "left",
   "labelPosition": "Top",
+  "labelStyle": "BOLD",
   "labelText": "Diagnosis *",
   "labelTextSize": "0.875rem",
   "labelWidth": 5,

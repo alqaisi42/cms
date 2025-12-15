@@ -1,0 +1,11 @@
+{
+  "gitSyncId": "68ac2838dde0d07712e044df_035d34a4-fcdb-4728-9245-b666e8d1bcf6",
+  "id": "Visit Details Copy_GetCustomWidgetModel",
+  "unpublishedCollection": {
+    "name": "GetCustomWidgetModel",
+    "pageId": "Visit Details Copy",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": []
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "gitSyncId": "68ac2838dde0d07712e044df_20a12135-150c-4c01-b59f-0c16d702ea10",
+  "id": "Visit Details Copy_getTodayDate",
+  "unpublishedCollection": {
+    "name": "getTodayDate",
+    "pageId": "Visit Details Copy",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": []
+  }
+}

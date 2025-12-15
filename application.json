@@ -40,7 +40,7 @@
       "isDefault": false
     },
     {
-      "id": "Notifications",
+      "id": "All Subscribers",
       "isDefault": false
     },
     {
@@ -76,11 +76,19 @@
       "isDefault": false
     },
     {
+      "id": "Notifications",
+      "isDefault": false
+    },
+    {
       "id": "Profile",
       "isDefault": false
     },
     {
       "id": "LogOut",
+      "isDefault": false
+    },
+    {
+      "id": "Visit Details Copy",
       "isDefault": false
     }
   ],
