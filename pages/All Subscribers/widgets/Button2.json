@@ -20,6 +20,9 @@
   "dynamicPropertyPathList": [
     {
       "key": "isDisabled"
+    },
+    {
+      "key": "onClick"
     }
   ],
   "dynamicTriggerPathList": [
@@ -39,7 +42,7 @@
   "mobileRightColumn": 54,
   "mobileTopRow": 1,
   "needsErrorInfo": false,
-  "onClick": "{{showModal(Modal1.name);}}",
+  "onClick": "{{\n  (() => {\n    if (usersTable.selectedRow?.IS_REGISTERED === \"true\") {\n      showAlert(\"This user is already registered. Please use the (Manage) button or the (Application Users) tab to manage the user and their dependents.\", \"warning\");\n    } else {\n      showModal(Modal1.name);\n    }\n  })()\n}}\n",
   "parentColumnSpace": 19.8125,
   "parentId": "0",
   "parentRowSpace": 10,

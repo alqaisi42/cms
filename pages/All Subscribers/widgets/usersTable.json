@@ -54,7 +54,7 @@
     "customColumn1",
     "IS_REGISTERED"
   ],
-  "columnUpdatedAt": 1765786646280,
+  "columnUpdatedAt": 1765791186554,
   "columnWidthMap": {
     "CNT_ID": 116,
     "COVERED_FLG": 123,
@@ -932,7 +932,7 @@
       "isCellEditable": false,
       "isCellVisible": true,
       "isDerived": true,
-      "isDisabled": "{{(() => { const tableData = usersTable.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ( \n(appsmith.store.selectedUserId !== currentRow.SUBS_ID) ||  usersTable.selectedRowIndex === -1 )) :  \n(appsmith.store.selectedUserId !== currentRow.SUBS_ID) ||  usersTable.selectedRowIndex === -1  })()}}",
+      "isDisabled": "{{(() => { const tableData = usersTable.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ( \n(appsmith.store.selectedUserId !== currentRow.SUBS_ID) ||  ( usersTable.selectedRowIndex === -1 )  )) :  \n(appsmith.store.selectedUserId !== currentRow.SUBS_ID) ||  ( usersTable.selectedRowIndex === -1 )   })()}}",
       "isDiscardVisible": true,
       "isEditable": false,
       "isSaveVisible": true,
@@ -940,7 +940,7 @@
       "label": "Manage",
       "labelColor": "#FFFFFF",
       "notation": "standard",
-      "onClick": "{{\n  (async () => {\n    if (usersTable.selectedRow?.SUBS_ID) {\n      await storeValue(\"Routefrom\", \"All\");\n      navigateTo(\"UserDetailsPage\", {}, \"SAME_WINDOW\");\n    } else {\n      showAlert(\"Please select a subscriber row first\", \"warning\");\n    }\n  })()\n}}\n",
+      "onClick": "{{ (async () => { if (usersTable.selectedRow?.SUBS_ID) { await storeValue(\"Routefrom\", \"All\"); navigateTo(\"UserDetailsPage\", {}, \"SAME_WINDOW\"); } else { showAlert(\"Please select a subscriber row first\", \"warning\"); } })() }}",
       "originalId": "customColumn1",
       "sticky": "right",
       "textSize": "0.875rem",
