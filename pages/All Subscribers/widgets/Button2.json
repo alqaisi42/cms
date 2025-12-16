@@ -42,7 +42,7 @@
   "mobileRightColumn": 54,
   "mobileTopRow": 1,
   "needsErrorInfo": false,
-  "onClick": "{{\n  (() => {\n    if (usersTable.selectedRow?.IS_REGISTERED === \"true\") {\n      showAlert(\"This user is already registered. Please use the (Manage) button or the (Application Users) tab to manage the user and their dependents.\", \"warning\");\n    } else {\n      showModal(Modal1.name);\n    }\n  })()\n}}\n",
+  "onClick": "{{\n  (() => {\n    const row = usersTable.selectedRow;\n\n    if (!row) {\n      showAlert(\"Please select a user first.\", \"warning\");\n      return;\n    }\n\n    // 1️⃣ Already registered\n    if (row.IS_REGISTERED === \"true\") {\n      showAlert(\n        \"This user is already registered. Please use the (Manage) button or the (Application Users) tab to manage the user and their dependents.\",\n        \"warning\"\n      );\n      return;\n    }\n\n    // 2️⃣ Not Head of Family\n    if (row.HOF_ID !== null) {\n      showAlert(\n        \"To activate this user, the user must be the Head of Family and currently inactive.\",\n        \"error\"\n      );\n      return;\n    }\n\n    // 3️⃣ Eligible → open modal\n    showModal(Modal1.name);\n  })()\n}}\n",
   "parentColumnSpace": 19.8125,
   "parentId": "0",
   "parentRowSpace": 10,
