@@ -1,79 +1,151 @@
 export default {
   updateUserFlag: async () => {
-    const row = dep_table.updatedRow;
-    const appUserUpdates = [];
 
-    if (row.hasOwnProperty("IS_ADMIN")) {
-      appUserUpdates.push(`FLG_ADMIN = ${row.IS_ADMIN ? 1 : 0}`);
-    }
+    /* =======================
+       Helpers
+    ======================== */
 
-    if (row.hasOwnProperty("IS_ENABLED")) {
-      appUserUpdates.push(`FLG_ENABLED = ${row.IS_ENABLED ? 1 : 0}`);
-			
-			if(row.IS_ENABLED == 0 ){
-      await notificationJS.sendReminder(row.ID);
-			}
-    }
+    const flag = (v) =>
+      v === true || v === 1 || v === "1" ? 1 : 0;
 
-    if (row.hasOwnProperty("IS_BLOCKED")) {
-      appUserUpdates.push(`FLG_BLOCKED = ${row.IS_BLOCKED ? 1 : 0}`);
-    }
+    const num = (v, fallback = null) =>
+      v === undefined || v === null || v === "" ? fallback : Number(v);
 
-    if (row.hasOwnProperty("DEVICE_ID")) {
-      appUserUpdates.push(`DEVICE_ID = ${row.DEVICE_ID ? `'${row.DEVICE_ID}'` : 'NULL'}`);
-    }
+    const sqlString = (v) =>
+      v === undefined || v === null
+        ? null
+        : `'${String(v).replace(/'/g, "''")}'`;
 
-    if (row.hasOwnProperty("USER_PHONE")) {
-    const mobileNumber = row.DEPENDENT_PHONE ? row.DEPENDENT_PHONE.substring(0, 15) : '';
-    appUserUpdates.push(`MOBILE_NUMBER = '${mobileNumber}'`);
-    }
+    /* =======================
+       Rows
+    ======================== */
 
-    const subsId = row.ID;
+    const updated = dep_table.updatedRow || {};
+    const selected = dep_table.selectedRow || {};
 
-    let appUsersSql = '';
-    if (appUserUpdates.length > 0) {
-      appUsersSql = `
-        UPDATE COREAPPS.APP_USERS
-        SET ${appUserUpdates.join(", ")}
-        WHERE SUBS_ID = ${subsId}
-      `;
-    }
-
-    let dependentPhoneSql = '';
-    if (row.hasOwnProperty("DEPENDENT_PHONE")) {
-      dependentPhoneSql = `
-        MERGE INTO COREAPPS.DEPENDENTS_PHONE d
-        USING (SELECT ${subsId} AS SUBS_ID, '${row.DEPENDENT_PHONE}' AS PHONE_NUMBER, SYSDATE AS CREATED_DATE FROM DUAL) src
-        ON (d.SUBS_ID = src.SUBS_ID)
-        WHEN MATCHED THEN
-          UPDATE SET d.PHONE_NUMBER = src.PHONE_NUMBER, d.CREATED_DATE = src.CREATED_DATE
-        WHEN NOT MATCHED THEN
-          INSERT (SUBS_ID, HOF_ID, PHONE_NUMBER, CREATED_DATE)
-          VALUES (src.SUBS_ID, ${row.HOF_ID || subsId}, src.PHONE_NUMBER, src.CREATED_DATE)
-      `;
-    }
-		
-    let fullSql = '';
-    if (appUsersSql || dependentPhoneSql) {
-        fullSql = `
-            BEGIN
-              ${appUsersSql ? appUsersSql + ';' : ''}
-              ${dependentPhoneSql ? dependentPhoneSql + ';' : ''}
-              COMMIT;
-            END;
-        `;
-    } else {
-      showAlert("No relevant fields changed for update.", "info");
+    // ✅ SAFEST way
+    const subsId = num(selected.SUBS_ID ?? selected.ID);
+    if (!subsId) {
+      showAlert("No subscriber selected", "error");
       return;
     }
 
+    const hofId = num(selected.HOF_ID, subsId);
+
+    /* =======================
+       APP_USERS UPDATE
+    ======================== */
+
+    const appUserUpdates = [];
+
+    if (updated.IS_ADMIN !== undefined) {
+      appUserUpdates.push(`FLG_ADMIN = ${flag(updated.IS_ADMIN)}`);
+    }
+
+    if (updated.IS_ENABLED !== undefined) {
+      const enabled = flag(updated.IS_ENABLED);
+      appUserUpdates.push(`FLG_ENABLED = ${enabled}`);
+
+      if (enabled === 0) {
+        await notificationJS.sendReminder(subsId);
+      }
+    }
+
+    if (updated.IS_BLOCKED !== undefined) {
+      appUserUpdates.push(`FLG_BLOCKED = ${flag(updated.IS_BLOCKED)}`);
+    }
+
+    if (updated.DEVICE_ID !== undefined) {
+      appUserUpdates.push(
+        updated.DEVICE_ID
+          ? `DEVICE_ID = ${sqlString(updated.DEVICE_ID)}`
+          : `DEVICE_ID = NULL`
+      );
+    }
+
+    if (updated.DEPENDENT_PHONE !== undefined) {
+      const phone = updated.DEPENDENT_PHONE?.substring(0, 15) || '';
+      appUserUpdates.push(`MOBILE_NUMBER = ${sqlString(phone)}`);
+    }
+
+    const appUsersSql = appUserUpdates.length
+      ? `
+        UPDATE COREAPPS.APP_USERS
+        SET ${appUserUpdates.join(", ")}
+        WHERE SUBS_ID = ${subsId}
+      `
+      : '';
+
+    /* =======================
+       DEPENDENTS_PHONE MERGE
+    ======================== */
+
+    const dependentPhoneSql =
+      updated.DEPENDENT_PHONE !== undefined
+        ? `
+        MERGE INTO COREAPPS.DEPENDENTS_PHONE d
+        USING (
+          SELECT 
+            ${subsId} AS SUBS_ID,
+            ${hofId} AS HOF_ID,
+            ${sqlString(updated.DEPENDENT_PHONE.substring(0, 15))} AS PHONE_NUMBER,
+            SYSDATE AS CREATED_DATE
+          FROM DUAL
+        ) src
+        ON (d.SUBS_ID = src.SUBS_ID)
+        WHEN MATCHED THEN
+          UPDATE SET
+            d.PHONE_NUMBER = src.PHONE_NUMBER,
+            d.CREATED_DATE = src.CREATED_DATE
+        WHEN NOT MATCHED THEN
+          INSERT (
+            ID,
+            SUBS_ID,
+            HOF_ID,
+            PHONE_NUMBER,
+            CREATED_DATE
+          )
+          VALUES (
+            COREAPPS.DEPENDENTS_PHONE_SEQ.NEXTVAL,
+            src.SUBS_ID,
+            src.HOF_ID,
+            src.PHONE_NUMBER,
+            src.CREATED_DATE
+          )
+      `
+        : '';
+
+    /* =======================
+       Final SQL
+    ======================== */
+
+    if (!appUsersSql && !dependentPhoneSql) {
+      showAlert("No changes detected", "info");
+      return;
+    }
+
+    const fullSql = `
+      BEGIN
+        ${appUsersSql ? appUsersSql + ';' : ''}
+        ${dependentPhoneSql ? dependentPhoneSql + ';' : ''}
+        COMMIT;
+      END;
+    `;
+
+    /* =======================
+       Execute
+    ======================== */
+
     try {
       await update_user_dynamic.run({ query: fullSql });
-      showAlert("User and/or Dependent information updated successfully!", "success");
+
+      showAlert("User updated successfully", "success");
+
       await getSubsDep.run();
-    } catch (error) {
-      showAlert("Error updating user information: " + error.message, "error");
-      console.error("Update error:", error);
+
+    } catch (e) {
+      console.error(e);
+      showAlert(e.message || "Update failed", "error");
     }
   }
-}
+};
